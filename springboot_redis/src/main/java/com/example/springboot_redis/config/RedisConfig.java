@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 public class RedisConfig {
     // 这是我给大家写好的一个固定模板，大家在企业中，拿去就可以直接使用！
-    // 自己定义了一个RedisTemplate
+    // 自定义一个RedisTemplate
     @Bean
     @SuppressWarnings("all")
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
