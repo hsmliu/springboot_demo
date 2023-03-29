@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: your.kafka.server:port
+    consumer:
+      group-id: your.consumer.group.id
+      auto-offset-reset: earliest
+      properties:
+        key:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
