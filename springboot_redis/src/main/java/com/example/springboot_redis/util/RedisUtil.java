@@ -589,4 +589,13 @@ public class RedisUtil {
         }
         return values;
     }
+
+    /**
+     * redis发布订阅
+     * @param topic 主题
+     * @param message 消息
+     */
+    public void messageSend(String topic, Object message){
+        redisTemplate.convertAndSend(topic, message);
+    }
 }
